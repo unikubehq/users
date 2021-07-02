@@ -1,0 +1,18 @@
+--extra-index-url=https://blueshoe:wXwzwnMrVqh2DY7p@pypi.blueshoe.de
+
+# Blueshoe pypi
+unikube-commons~=0.24.1
+
+# regular pypi
+bpython
+Django>=2.0,<3.0
+django-extensions
+django-hurricane~=0.6.0
+environs~=8.0.0
+graphene-django==2.9.1
+graphene-federation~=0.1.0
+psycopg2>=2.7,<3.0
+sentry-sdk~=0.19.5
+
+# tests
+factory_boy

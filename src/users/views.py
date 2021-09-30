@@ -17,6 +17,10 @@ class AvatarUploadView(UpdateView):
     fields = ["avatar_image"]
 
     def get_object(self, queryset=None):
+        token_id = self.request.kcuser.get("uuid", None)
+        user_pk = self.kwargs["pk"]
+        if str(token_id) != str(user_pk):
+            raise Http404
         try:
             return super(AvatarUploadView, self).get_object(queryset=queryset)
         except Http404:

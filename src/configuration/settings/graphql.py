@@ -15,8 +15,8 @@ from .base import MIDDLEWARE
 ROOT_URLCONF = "configuration.urls.graphql"
 
 MIDDLEWARE += [
-    "commons.middleware.TokenMiddleware",
     "commons.keycloak.middleware.KCPermissionMiddleware",
+
 ]
 
 GRAPHENE_PER_PAGE = 10

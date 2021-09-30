@@ -1,9 +1,17 @@
+import logging
+
 from django.http import Http404, JsonResponse
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import UpdateView
 
 from .models import UnikubeUser
 
 
+logger = logging.getLogger('hurricane.users')
+
+
+@method_decorator(csrf_exempt, name='dispatch')
 class AvatarUploadView(UpdateView):
     model = UnikubeUser
     fields = ["avatar_image"]

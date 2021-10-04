@@ -16,3 +16,13 @@ aligned throughout the project.
 
 To make sure your code is well formatted, please install [pre-commit](https://pre-commit.com/). 
 After that just run `pre-commit install` in the repositories root directory.
+
+### Release
+
+We're using [python-semantic-release](https://github.com/relekang/python-semantic-release)
+for the release workflow. To publish a new version of the service, simply run
+```shell
+semantic-release publish
+```
+
+Write access to the repository is needed.

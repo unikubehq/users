@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.3.1 (2021-10-04)
+### Fix
+* Do not upload release ([`6f7eacb`](https://github.com/unikubehq/users/commit/6f7eacbe7b441af05a04e3483207b9e2600c30ae))
+
 ## v0.3.0 (2021-10-04)
 ### Feature
 * Move from bump2version to semantic release ([`d141158`](https://github.com/unikubehq/users/commit/d1411584f550a3bb80a02a16a32cae394eac1900))

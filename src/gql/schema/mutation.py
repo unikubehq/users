@@ -55,7 +55,6 @@ class UpdateUser(graphene.Mutation):
 
                 if status == 204:
                     return cls(ok=True)
-                return cls(ok=False)
             except Exception:
                 pass
         return cls(ok=False)

@@ -1,20 +1,18 @@
 import graphene
 from commons.keycloak.users import UserHandler
-from django.http import Http404
-from graphene import UUID, ObjectType, String
 from graphene_federation import key
 
 from users.models import UnikubeUser
 
 
 @key(fields="id")
-class UserNode(ObjectType):
-    id = UUID(required=True)
-    email = String()
-    name = String()
-    family_name = String()
-    given_name = String()
-    avatar_image = String()
+class UserNode(graphene.ObjectType):
+    id = graphene.UUID(required=True)
+    email = graphene.String()
+    name = graphene.String()
+    family_name = graphene.String()
+    given_name = graphene.String()
+    avatar_image = graphene.String()
 
     def __resolve_reference(self, info, **kwargs):
         uh = UserHandler()
